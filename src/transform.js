@@ -1,4 +1,6 @@
 function transform(input) {
+  const updated = new Date().toISOString();
+
   const cameras = (() => {
     if (Array.isArray(input)) return input;
     if (Array.isArray(input?.data)) return input.data;
@@ -27,7 +29,7 @@ function transform(input) {
     .filter(Boolean);
 
   if (normalizedIds.length === 0) {
-    return { data: cameras };
+    return { data: cameras, updated };
   }
 
   const allowedIds = new Set(normalizedIds);
@@ -36,5 +38,5 @@ function transform(input) {
     return cameraId !== '' && allowedIds.has(cameraId);
   });
 
-  return { data: filteredCameras };
+  return { data: filteredCameras, updated };
 }
