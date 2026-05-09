@@ -10,7 +10,6 @@ polling_url: https://github.com/stephenyeargin/trmnl-tdot-smartway/raw/refs/head
 polling_headers: content-type=application/json
 polling_body: ''
 id: 302448
-category: travel,images
 custom_fields:
 - keyname: author_bio
   name: About This Plugin
@@ -19,6 +18,7 @@ custom_fields:
   github_url: https://github.com/stephenyeargin/trmnl-tdot-smartway
   learn_more_url: https://smartway.tn.gov
   email_address: stephen@yearg.in
+  category: travel,images
 - keyname: tdot_camera_ids
   field_type: string
   name: TDOT Camera IDs
