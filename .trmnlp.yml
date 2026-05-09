@@ -7,12 +7,19 @@ watch:
   - src
 
 # values of custom fields (defined in src/settings.yml)
-custom_fields: {}
+custom_fields: {
+  tdot_camera_ids: "4212,4195,3238,4656,4654,4680"
+}
 
 # override variables
 variables:
   trmnl: {
     plugin_settings: {
-      instance_name: 'My Instance'
+      instance_name: 'TDOT SmartWay Cameras'
+    },
+    user: {
+      time_zone: Central Time (US & Canada),
+      time_zone_iana: America/Chicago,
+      utc_offset: -18000
     }
   }

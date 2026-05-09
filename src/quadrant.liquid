@@ -1,17 +1,27 @@
-<div class="layout layout--row layout--top">
-  <div class="grid grid--cols-1 gap--medium lg:gap--large">
-    <div class="item">
-      <div class="meta"></div>
-      <div class="content">
-        <div class="title title--base lg:title--large">Quadrant</div>
-        <div class="description description--base lg:description--large">Replace me with your content!</div>
+<div class="layout layout--row">
+  <div
+    class="columns"
+    data-overflow="true"
+    data-overflow-max-cols-portrait="1"
+    data-overflow-max-cols="2"
+    data-overflow-counter="false"
+  >
+    <div class="column">
+      {% for camera in cameras_filtered %}
+      {% render 'camera_card', camera: camera, size: 'h--32', large_size: 'h--32' %}
+      {% else %}
+      <div class="text--center">
+        <div><span class="title">Unable to load SmartWay data</span></div>
+        <div><span class="description">Check https://smartway.tn.gov/ for updates.</span></div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>
 
 <div class="title_bar">
   <img class="image image-stroke--medium" src="data:image/svg+xml;base64,{{ logo_svg | base64_encode }}" />
-  <span class="title">Plugin Template</span>
+  <span class="title">{{ 'now' | date: '%s' | plus: trmnl.user.utc_offset | date: '%-m/%-d @ %-I:%M %p' }}</span>
   <span class="instance">{{ trmnl.plugin_settings.instance_name }}</span>
 </div>
+

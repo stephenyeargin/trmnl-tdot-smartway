@@ -1,18 +1,67 @@
 {%- capture logo_svg %}
-<svg width="160" height="162" viewBox="0 0 160 162" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M43.2322 11.3438L85.6168 27.2379L77.7459 48.2271L35.3613 32.3328L43.2322 11.3438Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M111.192 6.1543L125.192 49.2018L103.875 56.1345L89.875 13.0871L111.192 6.1543Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M157.609 56.0686L132.682 93.8537L113.971 81.5097L138.898 43.7246L157.609 56.0686Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M147.533 123.467L102.449 127.536L100.434 105.211L145.517 101.141L147.533 123.467Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M88.5468 157.611L57.2559 124.901L73.4541 109.406L104.745 142.116L88.5468 157.611Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M25.0723 132.804L31.1366 87.9453L53.3508 90.9484L47.2865 135.808L25.0723 132.804Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.9082 67.6808L43.7612 44.4531L55.2636 63.6933L16.4107 86.921L4.9082 67.6808Z" fill="black"/>
+<svg width="100%" height="100%" viewBox="0 0 545 545" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+  <g transform="matrix(1,0,0,1,-207.139,-124.039)">
+    <path d="M493.5,124.4C332,116.2 199.3,248.9 207.5,410.4C214.5,548.7 326.9,661 465.1,668C626.6,676.2 759.3,543.5 751.1,382C744.2,243.8 631.8,131.4 493.5,124.4Z" style="fill:rgb(177,32,36);fill-rule:nonzero;"/>
+  </g>
+  <g transform="matrix(1,0,0,1,-207.139,-124.039)">
+    <circle cx="479.4" cy="396.2" r="246.9" style="fill:white;"/>
+  </g>
+  <g transform="matrix(1,0,0,1,-207.139,-124.039)">
+    <circle cx="479.4" cy="396.2" r="221.9" style="fill:rgb(44,72,134);"/>
+  </g>
+  <g transform="matrix(1,0,0,1,-207.139,-124.039)">
+    <path d="M685.2,402.4L610.3,400.9L585.8,471.7L564,400L489.1,398.6L550.5,355.7L528.8,284L588.5,329.2L650,286.4L625.5,357.2L685.2,402.4Z" style="fill:white;fill-rule:nonzero;"/>
+  </g>
+  <g transform="matrix(1,0,0,1,-207.139,-124.039)">
+    <path d="M506.6,602.8L454.7,548.8L387.3,581.5L422.6,515.4L370.6,461.4L444.4,474.6L479.7,408.5L490,482.7L563.7,495.8L496.3,528.6L506.6,602.8Z" style="fill:white;fill-rule:nonzero;"/>
+  </g>
+  <g transform="matrix(1,0,0,1,-207.139,-124.039)">
+    <path d="M489.2,275.2L437.3,329.2L472.6,395.3L405.2,362.6L353.3,416.7L363.5,342.5L296.1,309.8L369.8,296.6L380,222.4L415.4,288.4L489.2,275.2Z" style="fill:white;fill-rule:nonzero;"/>
+  </g>
 </svg>
 {%- endcapture %}
 
-<!-- Polyfill until .clamp--nicely exists in V2 -->
-<style>
-  .trmnl .clamp--nicely {
-    word-break: break-word;
-  }
-</style>
+{% assign cameras = data %}
+{% assign camera_ids = trmnl.plugin_settings.custom_fields_values.tdot_camera_ids | split: ',' %}
+
+{% assign cameras_filtered = cameras %}
+{% assign has_camera_filter = false %}
+{% for raw_id in camera_ids %}
+{% if raw_id | strip != '' %}
+{% assign has_camera_filter = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+
+{% if has_camera_filter %}
+{% assign cameras_filtered = '' | split: '' %}
+{% for camera in cameras %}
+{% assign camera_id = camera.id | append: '' | strip %}
+{% for raw_id in camera_ids %}
+{% assign target_id = raw_id | strip %}
+{% if target_id != '' and camera_id == target_id %}
+{% assign matched_camera = cameras | where: 'id', camera.id %}
+{% assign cameras_filtered = cameras_filtered | concat: matched_camera %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% template camera_card %}
+<!-- Smaller Screen -->
+<div class="item lg:hidden">
+  <div class="text--center w--full">
+    <img class="image image-dither rounded {{ size }}" src="{{ camera.thumbnailUrl }}" alt="{{ camera.title }}"  style="filter: grayscale(1) contrast(1.2) brightness(1.1) saturate(0.8);" />
+    <p class="description description--small" data-clamp="1">{{ camera.description }}</p>
+  </div>
+</div>
+
+<!-- Larger Screen -->
+<div class="item hidden lg:block">
+  <div class="text--center w--full">
+    <img class="image image-dither rounded {{ large_size }}" src="{{ camera.thumbnailUrl }}" alt="{{ camera.title }}"  style="filter: grayscale(1) contrast(1.2) brightness(1.1) saturate(0.8);" />
+    <p class="description description--small" data-clamp="1">{{ camera.description }}</p>
+  </div>
+</div>
+{% endtemplate %}

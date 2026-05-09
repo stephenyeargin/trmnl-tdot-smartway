@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -u
+
+URL="https://www.tdot.tn.gov/opendata/api/public/RoadwayCameras"
+OUTFILE="../assets/cameras.json"
+
+if [ -z "${TDOT_SMARTWAY_API_KEY:-}" ]; then
+    echo "Must set TDOT_SMARTWAY_API_KEY" >&2
+    exit 1
+fi
+
+if curl -fsSL \
+    -H "ApiKey: ${TDOT_SMARTWAY_API_KEY}" \
+    -o "$OUTFILE" \
+    "$URL"
+then
+    echo "SUCCESS: downloaded to $OUTFILE"
+else
+    status=$?
+    echo "FAILURE: curl exited with status $status" >&2
+
+    rm -f "$OUTFILE"
+    exit "$status"
+fi

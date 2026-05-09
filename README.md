@@ -1,4 +1,10 @@
-# TRMNL Plugin
+# TDOT SmartWay Cameras for TRMNL
+
+[![Build and Release](https://github.com/stephenyeargin/trmnl-tdot-smartway/actions/workflows/build.yml/badge.svg)](https://github.com/stephenyeargin/trmnl-tdot-smartway/actions/workflows/build.yml)
+
+![promo](assets/promo.png)
+
+### Screenshots
 
 ![screenshot](assets/screenshot.png)
 

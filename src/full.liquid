@@ -3,23 +3,17 @@
     class="columns"
     data-overflow="true"
     data-overflow-max-cols-portrait="1"
-    data-overflow-max-cols="2"
-    data-overflow-counter="true"
+    data-overflow-max-cols="3"
+    data-overflow-max-cols-lg="3"
+    data-overflow-counter="false"
   >
     <div class="column">
-      {% for item in data %}
-      <div class="item">
-        <div class="meta"></div>
-        <div class="content flex flex--row flex--top gap--medium lg:gap--large">
-          <div class="w--[66cqw]">
-            <div><span class="title title--small lg:title--base" data-clamp="1">{{ item.title }}</span></div>
-            <div><span class="label label--small lg:label--base">by {{ item.author }} | {{ item.category }}</span></div>
-            <div><span class="description lg:description--large" data-clamp="2">{{ item.content }}</span></div>
-          </div>
-          <div class="w--[34cqw]">
-            <img class="image image-dither image--cover w--28 lg:w--32" src="https://placehold.co/600x400/000000/FFF?text={{ item.category }}" />
-          </div>
-        </div>
+      {% for camera in cameras_filtered %}
+      {% render 'camera_card', camera: camera, size: 'h--44', large_size: 'h--90' %}
+      {% else %}
+      <div class="text--center">
+        <div><span class="title">Unable to load SmartWay data</span></div>
+        <div><span class="description">Check https://smartway.tn.gov/ for updates.</span></div>
       </div>
       {% endfor %}
     </div>
@@ -28,6 +22,6 @@
 
 <div class="title_bar">
   <img class="image image-stroke--medium" src="data:image/svg+xml;base64,{{ logo_svg | base64_encode }}" />
-  <span class="title">Plugin Template</span>
+  <span class="title">Last updated {{ 'now' | date: '%s' | plus: trmnl.user.utc_offset | date: '%b %-d, %Y %-I:%M %p'  }}</span>
   <span class="instance">{{ trmnl.plugin_settings.instance_name }}</span>
 </div>
