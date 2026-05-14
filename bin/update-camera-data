@@ -3,7 +3,7 @@
 set -u
 
 URL="https://www.tdot.tn.gov/opendata/api/public/RoadwayCameras"
-OUTFILE="../assets/cameras.json"
+OUTFILE="./assets/cameras.json"
 
 if [ -z "${TDOT_SMARTWAY_API_KEY:-}" ]; then
     echo "Must set TDOT_SMARTWAY_API_KEY" >&2
@@ -23,3 +23,6 @@ else
     rm -f "$OUTFILE"
     exit "$status"
 fi
+
+jq 'sort_by(.id)' $OUTFILE > tmp.json && mv tmp.json $OUTFILE
+echo "SUCCESS: sorted and formatted $OUTFILE"
