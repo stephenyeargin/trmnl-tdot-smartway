@@ -4537,8 +4537,8 @@
   },
   {
     "id": 3339,
-    "title": "I-65 NB @ Rivergate Parkway (MM 95.87) (R3-021)",
-    "description": "I-65 NB @ Rivergate Parkway (MM 95.87) (R3-021)",
+    "title": "I-65 NB  @ Rivergate Parkway (MM 95.87) (R3-021)",
+    "description": "I-65 NB  @ Rivergate Parkway (MM 95.87) (R3-021)",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_021.flv.png",
     "httpVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R3_021/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R3_021/playlist.m3u8",
@@ -4726,8 +4726,8 @@
   },
   {
     "id": 3347,
-    "title": "I-440 EB @ I-40 ((no effective MM)) (R3-029)",
-    "description": "I-440 EB @ I-40 ((no effective MM)) (R3-029)",
+    "title": "I-440 EB @ I-40  ((no effective MM)) (R3-029)",
+    "description": "I-440 EB @ I-40  ((no effective MM)) (R3-029)",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_029.flv.png",
     "httpVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R3_029/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R3_029/playlist.m3u8",
@@ -5050,8 +5050,8 @@
   },
   {
     "id": 3359,
-    "title": "Briley Pkwy SB @ Centennial Boulevard (MM 26.78) (R3-121)",
-    "description": "Briley Pkwy SB @ Centennial Boulevard (MM 26.78) (R3-121)",
+    "title": "Briley Pkwy SB @ Centennial Boulevard  (MM 26.78) (R3-121)",
+    "description": "Briley Pkwy SB @ Centennial Boulevard  (MM 26.78) (R3-121)",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_121.flv.png",
     "httpVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R3_121/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R3_121/playlist.m3u8",
@@ -6805,8 +6805,8 @@
   },
   {
     "id": 3428,
-    "title": "SR 385 bt. Kirby &amp; Riverdale",
-    "description": "SR 385 bt. Kirby &amp; Riverdale",
+    "title": "SR 385 bt. Kirby & Riverdale",
+    "description": "SR 385 bt. Kirby & Riverdale",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R4_110.flv.png",
     "httpVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R4_110/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R4_110/playlist.m3u8",
@@ -17788,33 +17788,6 @@
         {
           "lat": 34.98865,
           "lng": -85.47053
-        }
-      ]
-    }
-  },
-  {
-    "id": 6113,
-    "title": "Trailer Camera 4",
-    "description": "Trailer Camera 4",
-    "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_MT_004.flv.png",
-    "httpVideoUrl": "https://mcleansfs4.us-east-1.skyvdn.com:443/rtplive/R3_MT_004/playlist.m3u8",
-    "httpsVideoUrl": "https://mcleansfs4.us-east-1.skyvdn.com:443/rtplive/R3_MT_004/playlist.m3u8",
-    "rtmpVideoUrl": "rtmp://mcleansfs4.us-east-1.skyvdn.com:1935/rtplive/R3_MT_004",
-    "rtspVideoUrl": "rtsp://mcleansfs4.us-east-1.skyvdn.com:554/rtplive/R3_MT_004",
-    "clspUrl": null,
-    "clspsUrl": "clsps://mcleansfs4.us-east-1.skyvdn.com:443/R3_MT_004",
-    "active": "true",
-    "jurisdiction": "Nashville",
-    "route": "",
-    "mileMarker": "0",
-    "lat": 36.558141,
-    "lng": -87.251111,
-    "location": {
-      "type": "point",
-      "coordinates": [
-        {
-          "lat": 36.558141,
-          "lng": -87.251111
         }
       ]
     }
