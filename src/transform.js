@@ -1,5 +1,11 @@
 function transform(input) {
   const updated = new Date().toISOString();
+  const projectCamera = (camera) => ({
+    id: camera?.id,
+    thumbnailUrl: camera?.thumbnailUrl,
+    title: camera?.title,
+    description: camera?.description
+  });
 
   const cameras = (() => {
     if (Array.isArray(input)) return input;
@@ -29,7 +35,7 @@ function transform(input) {
     .filter(Boolean);
 
   if (normalizedIds.length === 0) {
-    return { data: cameras, updated };
+    return { data: cameras.map(projectCamera), updated };
   }
 
   const allowedIds = new Set(normalizedIds);
@@ -38,5 +44,5 @@ function transform(input) {
     return cameraId !== '' && allowedIds.has(cameraId);
   });
 
-  return { data: filteredCameras, updated };
+  return { data: filteredCameras.map(projectCamera), updated };
 }
