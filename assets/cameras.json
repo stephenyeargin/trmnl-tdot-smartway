@@ -2296,8 +2296,8 @@
   },
   {
     "id": 3251,
-    "title": "I-40 @ SR 840 JCT () (R3_202)",
-    "description": "I-40 @ SR 840 JCT () (R3_202)",
+    "title": "I-40 @ SR 840 JCT  () (R3_202)",
+    "description": "I-40 @ SR 840 JCT  () (R3_202)",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_202.flv.png",
     "httpVideoUrl": "https://mcleansfs1.us-east-1.skyvdn.com:443/rtplive/R3_202/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs1.us-east-1.skyvdn.com:443/rtplive/R3_202/playlist.m3u8",
@@ -6805,8 +6805,8 @@
   },
   {
     "id": 3428,
-    "title": "SR 385 bt. Kirby & Riverdale",
-    "description": "SR 385 bt. Kirby & Riverdale",
+    "title": "SR 385 bt. Kirby &amp; Riverdale",
+    "description": "SR 385 bt. Kirby &amp; Riverdale",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R4_110.flv.png",
     "httpVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R4_110/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs3.us-east-1.skyvdn.com:443/rtplive/R4_110/playlist.m3u8",
@@ -8263,8 +8263,8 @@
   },
   {
     "id": 3482,
-    "title": "I-24 EB @ Briley Parkway - (Antioch) (MM 53.75) (R3-081)",
-    "description": "I-24 EB @ Briley Parkway - (Antioch) (MM 53.75) (R3-081)",
+    "title": "I-24 EB  @ Briley Parkway - (Antioch) (MM 53.75) (R3-081)",
+    "description": "I-24 EB  @ Briley Parkway - (Antioch) (MM 53.75) (R3-081)",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_081.flv.png",
     "httpVideoUrl": "https://mcleansfs4.us-east-1.skyvdn.com:443/rtplive/R3_081/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs4.us-east-1.skyvdn.com:443/rtplive/R3_081/playlist.m3u8",
@@ -16012,8 +16012,8 @@
   },
   {
     "id": 5837,
-    "title": "I-40WB Past Hogan Rd (R-239)",
-    "description": "I-40WB Past Hogan Rd (R-239)",
+    "title": "I-40WB Past Hogan Rd (R3-239)",
+    "description": "I-40WB Past Hogan Rd (R3-239)",
     "thumbnailUrl": "https://tnsnapshots.com/thumbs/R3_239.flv.png",
     "httpVideoUrl": "https://mcleansfs1.us-east-1.skyvdn.com:443/rtplive/R3_239/playlist.m3u8",
     "httpsVideoUrl": "https://mcleansfs1.us-east-1.skyvdn.com:443/rtplive/R3_239/playlist.m3u8",
@@ -17766,33 +17766,6 @@
     }
   },
   {
-    "id": 6109,
-    "title": "Mobile Trailer 2",
-    "description": "Mobile Trailer 2",
-    "thumbnailUrl": "https://tnsnapshots.com/thumbs/R2_MT_002.flv.png",
-    "httpVideoUrl": "https://mcleansfs2.us-east-1.skyvdn.com:443/rtplive/R2_MT_002/playlist.m3u8",
-    "httpsVideoUrl": "https://mcleansfs2.us-east-1.skyvdn.com:443/rtplive/R2_MT_002/playlist.m3u8",
-    "rtmpVideoUrl": "rtmp://mcleansfs2.us-east-1.skyvdn.com:1935/rtplive/R2_MT_002",
-    "rtspVideoUrl": "rtsp://mcleansfs2.us-east-1.skyvdn.com:554/rtplive/R2_MT_002",
-    "clspUrl": null,
-    "clspsUrl": "clsps://mcleansfs2.us-east-1.skyvdn.com:443/R2_MT_002",
-    "active": "true",
-    "jurisdiction": "Chattanooga",
-    "route": "I-24",
-    "mileMarker": "166.4",
-    "lat": 34.98865,
-    "lng": -85.47053,
-    "location": {
-      "type": "point",
-      "coordinates": [
-        {
-          "lat": 34.98865,
-          "lng": -85.47053
-        }
-      ]
-    }
-  },
-  {
     "id": 6132,
     "title": "I-40 EB @ MM162 (R3_273)",
     "description": "I-40 EB @ MM162 (R3_273)",
@@ -18004,6 +17977,33 @@
         {
           "lat": 36.628477,
           "lng": -87.313963
+        }
+      ]
+    }
+  },
+  {
+    "id": 6169,
+    "title": "Mobile Trailer 3",
+    "description": "Mobile Trailer 3",
+    "thumbnailUrl": "https://tnsnapshots.com/thumbs/R2_MT_003.flv.png",
+    "httpVideoUrl": "https://mcleansfs2.us-east-1.skyvdn.com:443/rtplive/R2_MT_003/playlist.m3u8",
+    "httpsVideoUrl": "https://mcleansfs2.us-east-1.skyvdn.com:443/rtplive/R2_MT_003/playlist.m3u8",
+    "rtmpVideoUrl": "rtmp://mcleansfs2.us-east-1.skyvdn.com:1935/rtplive/R2_MT_003",
+    "rtspVideoUrl": "rtsp://mcleansfs2.us-east-1.skyvdn.com:554/rtplive/R2_MT_003",
+    "clspUrl": null,
+    "clspsUrl": "clsps://mcleansfs2.us-east-1.skyvdn.com:443/R2_MT_003",
+    "active": "true",
+    "jurisdiction": "Chattanooga",
+    "route": "I-24",
+    "mileMarker": "166.4",
+    "lat": 34.98865,
+    "lng": -85.47053,
+    "location": {
+      "type": "point",
+      "coordinates": [
+        {
+          "lat": 34.98865,
+          "lng": -85.47053
         }
       ]
     }

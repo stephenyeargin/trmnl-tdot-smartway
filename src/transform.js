@@ -1,4 +1,7 @@
 function transform(input) {
+  // How many to return, after filtering (to avoid returning 600+)
+  const MAX_CAMERAS = 12;
+
   const updated = new Date().toISOString();
   const projectCamera = (camera) => ({
     id: camera?.id,
@@ -35,7 +38,10 @@ function transform(input) {
     .filter(Boolean);
 
   if (normalizedIds.length === 0) {
-    return { data: cameras.map(projectCamera), updated };
+    return {
+      data: cameras.map(projectCamera).slice(0, MAX_CAMERAS),
+      updated
+    };
   }
 
   const allowedIds = new Set(normalizedIds);
@@ -44,5 +50,8 @@ function transform(input) {
     return cameraId !== '' && allowedIds.has(cameraId);
   });
 
-  return { data: filteredCameras.map(projectCamera), updated };
+  return {
+    data: filteredCameras.map(projectCamera).slice(0, MAX_CAMERAS),
+    updated
+  };
 }
