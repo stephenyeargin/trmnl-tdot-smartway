@@ -25,5 +25,5 @@ custom_fields:
   description: Camera IDs from <a href="https://smartway.tn.gov/allcams" class="underline">TDOT SmartWay</a>
   placeholder: 4193
 name: TDOT SmartWay
-description: Live traffic camera snapshots from TDOT SmartWay
+description: Live traffic camera snapshots
 refresh_interval: 15
