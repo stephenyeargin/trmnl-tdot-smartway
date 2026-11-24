@@ -22,6 +22,6 @@
 
 <div class="title_bar">
   <img class="image image-stroke--medium" src="data:image/svg+xml;base64,{{ logo_svg | base64_encode }}" />
-  <span class="title">Last updated {{ 'now' | date: '%s' | plus: trmnl.user.utc_offset | date: '%b %-d, %Y %-I:%M %p'  }}</span>
+  <span class="title">{{ 'now' | date: '%s' | plus: trmnl.user.utc_offset | date: '%b %-d, %Y %-I:%M %p'  }}</span>
   <span class="instance">{{ trmnl.plugin_settings.instance_name }}</span>
 </div>
